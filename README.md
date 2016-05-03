@@ -2,7 +2,7 @@
 
 MATLAB scripts for computing “Neural Network Training as a Dissipative Process”
 Authors: Marco Gori, Marco Maggini, Alessandro Rossi (2016)
-Contacts: rossi111@unisi.ti
+Contacts: rossi111@unisi.it
 
 BuildingMatrix.m: compute the matrices of the prediction function dynamical system
 
