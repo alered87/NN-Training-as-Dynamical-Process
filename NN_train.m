@@ -33,10 +33,13 @@ net.TestAccuracy=[net.TestAccuracy zeros(1,iterations)];
 
 net.eta = eta;
 
-n_last_batch = rem(size(TrainData,2),batch_size);
-n_updating = floor(size(TrainData,2)/batch_size);
+
 if batch_size == size(TrainData,2)
     n_last_batch = size(TrainData,2);
+    n_updating = 0;
+else
+    n_last_batch = rem(size(TrainData,2),batch_size);
+    n_updating = floor(size(TrainData,2)/batch_size);
 end
 
 % filename to save data
