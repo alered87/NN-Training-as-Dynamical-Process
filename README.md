@@ -4,24 +4,13 @@ MATLAB scripts for computing “Neural Network Training as a Dissipative Process
 Authors: Marco Gori, Marco Maggini, Alessandro Rossi (2016)
 Contacts: rossi111@unisi.it
 
-BuildingMatrix.m: compute the matrices of the prediction function dynamical system
+makeSystemMatrix.m: compute the matrices of the dynamical system
 
-PerformanceEval.m: evaluate the performance of the NN
+PlotImpulsiveResponse.m: plot the Impulsive Response of the dynamical system, given the roots of the characteristic polynomial
 
-PlotImpulsiveResponse.m: plot the Impulsive Response of the dynamical system
+TRnet.m: define a matlab object for the implementation of a 2-layer Neural Network, trainable in a standard mode or with the dissipative dynamic system proposed in the paper 
 
-TRNN_eval.m: evaluate the net on input
-
-TRNN_initialize.m: NN initialization
-
-TRNN_train: train a NN on data
-
-MNIST_Train.m: quick example launch on MNIST data
-
-NN_train.m: standard NN training  
-
-
-MNISTdata.mat: contain a subset of the MNIST(*) dataset
+reducedMnistData.mat: contain a subset (10000 elements) of the MNIST(*) dataset
 (*) see: http://yann.lecun.com/exdb/mnist/
 
-Vowels.mat: contains a toy dataset for vowels classification
+Vowels.mat: contains a toy dataset for vowels classification task
