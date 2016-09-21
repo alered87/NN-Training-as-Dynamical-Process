@@ -24,13 +24,19 @@ Data must be provided to the algorithm in a single `struct` variable with fields
 * Xtest : input_size-by-number_of_samples matrix of test data
 * Ytest : output_size-by-number_of_samples matrix of target for test data (Inf/NaN means unsupervised sample)
 
+The provided dataset (already in the required form) are:
+* reducedMnistData.mat : contains a subset (10000 elements) of the MNIST dataset [1]
+* vowels.mat : contains a toy dataset for vowels classification task (many unsupervised samples, target = Inf)
 
-Quick start commands - once you define your data, say in a variable 'Data' and choose the max number of training epochs: 
-    net = TRnet;net.train(data,maxEpochs);
 
-reducedMnistData.mat : contains a subset (10000 elements) of the MNIST dataset [1]
+## Usage 
 
-vowels.mat : contains a toy dataset for vowels classification task (many unsupervised samples, target = Inf)
+Once you defining data, 
+```matlab
+    net = TRnet;net.train(data,maxEpochs)
+```
+
+
 
 ###Contacts: 
 Alessandro Rossi : rossi111@unisi.it
