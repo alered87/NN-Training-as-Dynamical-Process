@@ -19,3 +19,5 @@ F = 1/prod(s-solutions);
 GF = ilaplace(F,s,t);
 
 ezplot(GF,[start_point,end_point]);
+title('Impulsive Response','FontSize',14);
+xlabel('t')
