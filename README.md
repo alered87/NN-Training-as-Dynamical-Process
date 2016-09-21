@@ -31,11 +31,30 @@ The provided dataset (already in the required form) are:
 
 ## Usage 
 
-Once you defining data, 
+The object can be initialized by 
 ```matlab
-    net = TRnet;net.train(data,maxEpochs)
+net = TRnet
+```
+all the argument of [TRnet.m](https://github.com/alered87/NN-Training-as-Dynamical-Process/blob/master/TRnet.m) are optionals and have to be called in argument-value pair; dissipative training can be selected by the boolean property `dissipativeTraining` ; the weights of the networks and the matries defining the dynamical system are initializated at the first training start or by the function 
+
+```matlab
+net.initialization(inputSize,outputSize)
+````
+
+at this point the dinamical system is defined (if `net.dissipativeTraining = 1`) and the Impulsive Response can be seen by:
+
+```matlab
+imre = PlotImpulsiveResponse(net.solutions,0,30)
+````
+<img src="imreplot.png" alt="Impulsive Response Plot"/><br/>
+
+The network training can be started by 
+
+```matlab
+net.train(data,maxEpochs)
 ```
 
+The object `net` save the performance during training on train and test set in the fields `trainAccuracy`,`trainMSE`,`testAccuracy`,`testMSE`
 
 
 ###Contacts: 
