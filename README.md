@@ -35,7 +35,7 @@ The object can be initialized by
 ```matlab
 net = TRnet
 ```
-all the argument of [TRnet.m](https://github.com/alered87/NN-Training-as-Dynamical-Process/blob/master/TRnet.m) are optionals and have to be called in argument-value pair; dissipative training can be selected by the boolean property `dissipativeTraining` ; the weights of the networks and the matries defining the dynamical system are initializated at the first training start or by the function 
+all the argument of [TRnet.m](https://github.com/alered87/NN-Training-as-Dynamical-Process/blob/master/TRnet.m) are optionals and have to be called in argument-value pair; dissipative training can be selected by the boolean property `dissipativeTraining` ; the weights of the networks and the matrices defining the dynamical system are initializated at the first training calling or by the function 
 
 ```matlab
 net.initialization(inputSize,outputSize)
@@ -57,8 +57,8 @@ net.train(data,maxEpochs)
 The object `net` save the performance during training on train and test set in the fields `trainAccuracy`,`trainMSE`,`testAccuracy`,`testMSE`
 
 
-###Contacts: 
+##Contacts: 
 Alessandro Rossi : rossi111@unisi.it
 
-###References:
+##References:
 [1] see: http://yann.lecun.com/exdb/mnist/
